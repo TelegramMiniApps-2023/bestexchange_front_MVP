@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-
 import {
   FormControl,
   InputLabel,
@@ -12,6 +11,7 @@ import {
 
 const API_BASE_URL = 'https://wttonline.ru/api'
 
+// the Component
 const GetCurrencyList = ({ onBaseCurrencyChange, onTargetCurrencyChange }) => {
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -90,10 +90,12 @@ const GetCurrencyList = ({ onBaseCurrencyChange, onTargetCurrencyChange }) => {
     })
   }
 
+  // ..LADING
   if (loading) {
     return <CircularProgress />
   }
 
+  // ..ERROR
   if (error) {
     return <p>Error loading data. {error}</p>
   }
@@ -101,7 +103,7 @@ const GetCurrencyList = ({ onBaseCurrencyChange, onTargetCurrencyChange }) => {
   return (
     <>
       <FormControl sx={{ m: 1, minWidth: 320 }}>
-        <InputLabel htmlFor="base-currency-select">Выберите что отдаете</InputLabel>
+        <InputLabel htmlFor="base-currency-select"> Выберите что даёте </InputLabel>
         <Select
           value={selectedBaseCurrency}
           id="base-currency-select"
@@ -113,7 +115,7 @@ const GetCurrencyList = ({ onBaseCurrencyChange, onTargetCurrencyChange }) => {
       </FormControl>
 
       <FormControl sx={{ m: 1, minWidth: 320 }}>
-        <InputLabel htmlFor="target-currency-select">Выберите что получаете</InputLabel>
+        <InputLabel htmlFor="target-currency-select"> Что хотите получить </InputLabel>
         <Select
           value={selectedTargetCurrency}
           id="target-currency-select"
@@ -123,6 +125,7 @@ const GetCurrencyList = ({ onBaseCurrencyChange, onTargetCurrencyChange }) => {
           {renderMenuItems(availableDirections)}
         </Select>
       </FormControl>
+
     </>
   )
 }

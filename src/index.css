@@ -18,6 +18,16 @@ body {
 	}
 }
 
+.MuiInputBase-input {text-align: left !important;}
+
+.the_card {
+	color: #4A5567 !important;
+
+	background: url("https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/external-link-128.png") bottom right no-repeat;
+}
+
+.tar {text-align: right !important; opacity: .24;}
+
 .empty-state {
 	margin: 40px;
 	background: #ffffff;
@@ -280,19 +290,19 @@ body {
   .earth-orbit {
 	  width: 165px;
 	  height: 165px;
-	-webkit-animation: spin 12s linear 0s infinite;
+	animation: spin 12s linear 0s infinite;
   }
   
   .venus-orbit {
 	  width: 120px;
 	  height: 120px;
-	-webkit-animation: spin 7.4s linear 0s infinite;
+	animation: spin 7.4s linear 0s infinite;
   }
   
   .mercury-orbit {
 	  width: 90px;
 	  height: 90px;
-	-webkit-animation: spin 3s linear 0s infinite;
+	animation: spin 3s linear 0s infinite;
   }
   
   .planet {
@@ -323,28 +333,28 @@ body {
 	  width: 165px;
 	  height: 165px;
 	border: 1px solid #91daffa5;
-	-webkit-animation: spin3D 3s linear .2s infinite;
+	animation: spin3D 3s linear .2s infinite;
   }
   
   .green-orbit {
 	  width: 120px;
 	  height: 120px;
 	border: 1px solid #91ffbfa5;
-	-webkit-animation: spin3D 2s linear 0s infinite;
+	animation: spin3D 2s linear 0s infinite;
   }
   
   .red-orbit {
 	  width: 90px;
 	  height: 90px;
 	border: 1px solid #ffca91a5;
-	-webkit-animation: spin3D 1s linear 0s infinite;
+	animation: spin3D 1s linear 0s infinite;
   }
   
   .white-orbit {
 	  width: 60px;
 	  height: 60px;
 	border: 2px solid #ffffff;
-	-webkit-animation: spin3D 10s linear 0s infinite;
+	animation: spin3D 10s linear 0s infinite;
   }
   
   .w1 {

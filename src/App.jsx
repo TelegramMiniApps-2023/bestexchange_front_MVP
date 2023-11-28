@@ -49,29 +49,31 @@ function App() {
 
   const boxStyles = {
     background: "#fdfdfd",
-    margin: "2rem 0",
+    margin: "2.4rem 0",
     textAlign: "center",
     color: "#222",
     padding: "2rem",
     boxShadow: "0px 10px 15px -3px rgba(0,0,0,0.1)",
     position: "relative",
     width: "100%",
-  };
+  }
 
   return (
     <>
       <Container sx={boxStyles}>
-        <Typography variant="h6" component="h2" gutterBottom>
-          BestExChanger beta v.0.6
-        </Typography>
+        <Typography variant="h6" component="div" className="tar">beta v.0.7</Typography>
+        <Typography variant="h2" component="h1" gutterBottom>BestExChanger</Typography>
+        
         <GetCurrencyList
           onBaseCurrencyChange={handleBaseCurrencyChange}
           onTargetCurrencyChange={handleTargetCurrencyChange}
         />
+        
         {/* <Button variant="contained" onClick={handleClick}>
           TELEGRAMMED
         </Button> */}
       </Container>
+
       {isShown && <ResultList from={selectedBaseCurrency} to={selectedTargetCurrency} />}
     </>
   )

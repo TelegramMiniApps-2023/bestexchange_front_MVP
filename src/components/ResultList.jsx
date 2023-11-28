@@ -79,8 +79,8 @@ const ResultList = ({ from, to }) => {
                 <Link key={d.id} href={d.partner_link} target='_blank' underline="none">
                     <Card className="the_card" sx={{ m: 2 }}>
                         <CardContent>
-                            <Typography variant="h2">{d.name}</Typography>
-                            <Typography variant="h5" component="div">
+                            <Typography variant="h4">{d.name}</Typography>
+                            <Typography variant="h6" component="div">
                                 {d.valute_from} 
                                 <ArrowForwardIosIcon /> 
                                 {d.valute_to}

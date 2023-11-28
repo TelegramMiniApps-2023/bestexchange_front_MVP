@@ -62,7 +62,7 @@ function App() {
     <>
       <Container sx={boxStyles}>
         <Typography variant="h6" component="div" className="tar">beta v.0.7</Typography>
-        <Typography variant="h2" component="h1" gutterBottom>BestExChanger</Typography>
+        <Typography variant="h3" component="h1" gutterBottom>BestExChanger</Typography>
         
         <GetCurrencyList
           onBaseCurrencyChange={handleBaseCurrencyChange}

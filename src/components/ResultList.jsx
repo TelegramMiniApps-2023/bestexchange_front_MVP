@@ -76,16 +76,23 @@ const ResultList = ({ from, to }) => {
     return (
         <>
             {data.map((d) => (
-                <Link key={d.id} href={d.partner_link} target='_blank' underline="none">
+                <Link key={d.id} href={d.partner_link} target="_blank" underline="none">
                     <Card className="the_card" sx={{ m: 2 }}>
                         <CardContent>
                             <Typography variant="h4">{d.name}</Typography>
                             <Typography variant="h6" component="div">
+                                <img src={d.icon_valute_from} alt={d.name} loading="lazy" />
                                 {d.valute_from} 
-                                <ArrowForwardIosIcon /> 
+                                <ArrowForwardIosIcon />
+                                <img src={d.icon_valute_to} alt={d.name} loading="lazy" />
                                 {d.valute_to}
                             </Typography>
                             <br />
+                            <Typography variant="div">
+                               in count: <Chip label={d.in_count} variant="outlined" /> 
+                               _ out-count: <Chip label={d.out_count} variant="outlined" />  
+                            </Typography>
+                            <br /><br />
                             <Typography variant="body2" color="text.secondary" component="div">
                                 от <Chip label={d.min_amount} /> 
                                 _ до <Chip label={d.max_amount} />

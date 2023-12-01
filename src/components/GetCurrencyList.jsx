@@ -26,7 +26,7 @@ const GetCurrencyList = ({ onBaseCurrencyChange, onTargetCurrencyChange }) => {
       try {
         const baseCurrenciesResponse = await axios.get(`${API_BASE_URL}/valute/no_cash`)
         console.log('1) All currencies response:', baseCurrenciesResponse.data)
-        setBaseCurrencies(baseCurrenciesResponse.data)
+        setBaseCurrencies(baseCurrenciesResponse.data)        
         setLoading(false)
       } catch (error) {
         console.error(error)
@@ -42,8 +42,8 @@ const GetCurrencyList = ({ onBaseCurrencyChange, onTargetCurrencyChange }) => {
   const handleBaseCurrencyChange = async (event) => {
     const selectedBaseCurrency = event.target.value;
     setSelectedBaseCurrency(selectedBaseCurrency);
-    setSelectedTargetCurrency('') // Reset the value of the second Select
-    onTargetCurrencyChange('') // Reset the value of the second Select
+    // setSelectedTargetCurrency('') // Reset the value of the second Select
+    // onTargetCurrencyChange('') // Reset the value of the second Select
     console.log('2) Selected base currency:', selectedBaseCurrency)
 
     try {
@@ -83,6 +83,7 @@ const GetCurrencyList = ({ onBaseCurrencyChange, onTargetCurrencyChange }) => {
         <ListSubheader key={`subheader-${category}`}>{category}</ListSubheader>,
         ...categoryData.map((item) => (
           <MenuItem key={item.code_name} value={item.code_name}>
+            <img className="selectIcon" src={item.icon_url} alt={item.name} />
             {item.name}
           </MenuItem>
         ))

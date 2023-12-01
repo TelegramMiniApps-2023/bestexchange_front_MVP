@@ -26,7 +26,12 @@ body {
 	background: url("https://cdn1.iconfinder.com/data/icons/heroicons-ui/24/external-link-64.png") top right no-repeat;
 }
 
+.the_card img {width: 25px !important; position: relative; bottom: -5px;}
+.the_card svg {position: relative; bottom: -5px;}
+
 .tar {text-align: right !important; opacity: .24;}
+
+.selectIcon {width: 25px !important; position: relative; bottom: -5px; left: -5px;}
 
 .empty-state {
 	margin: 40px;
